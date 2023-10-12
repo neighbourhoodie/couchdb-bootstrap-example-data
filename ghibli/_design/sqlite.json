@@ -1,0 +1,53 @@
+{
+  "language": "sqlite",
+  "sql": {
+    "tables": {
+      "movie": {
+        "fields": {
+          "_id": "VARCHAR",
+          "year": "INT",
+          "title": "VARCHAR",
+          "length": "INT",
+          "votes": "INT",
+          "rating": "REAL",
+          "director": "VARCHAR",
+          "description": "VARCHAR"
+        }
+      },
+      "character": {
+        "fields": {
+          "_id": "VARCHAR",
+          "name": "VARCHAR",
+          "movie": "VARCHAR",
+          "description": "VARCHAR"
+        }
+      },
+      "voiceactor": {
+        "fields": {
+          "_id": "VARCHAR",
+          "name": "VARCHAR",
+          "character": "VARCHAR",
+          "language": "VARCHAR"
+        }
+      },
+      "director": {
+        "fields": {
+          "_id": "VARCHAR",
+          "name": "VARCHAR",
+          "died": "BOOLEAN",
+          "date_of_birth": {
+            "field": "born.day",
+            "type": "VARCHAR"
+          },
+          "place_of_birth": {
+            "field": "born.place",
+            "type": "VARCHAR"
+          }
+        }
+      }
+    },
+    "indexes": [
+      "CREATE INDEX IF NOT EXISTS year ON movie (year)"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Hayao Miyazaki",
+  "type": "director",
+  "died": false,
+  "born": {
+    "place": "Bunkyō",
+    "day": "1941-01-05"
+  }
+}
